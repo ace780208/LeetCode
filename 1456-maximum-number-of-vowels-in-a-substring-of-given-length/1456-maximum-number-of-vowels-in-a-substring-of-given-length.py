@@ -15,4 +15,4 @@ class Solution:
         return ans
 
     def isVowel(self, s: str) -> bool:
-        return s in ["a", "e", "i", "o", "u"]
+        return s in "aeiou"
