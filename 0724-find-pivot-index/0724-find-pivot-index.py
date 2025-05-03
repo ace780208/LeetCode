@@ -8,7 +8,10 @@ class Solution:
         for index, left in enumerate(prefix[:-1]):
             right = prefix[-1] - prefix[index+1]
             if left == right:
-                ans = index
+                if ans == -1:
+                    ans = index
+                else:
+                    ans = min(ans, index)
 
         return ans
 
