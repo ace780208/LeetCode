@@ -13,7 +13,6 @@ class Solution:
             slow = slow.next
             fast = fast.next.next
             n += 1
-        print(n)
         
         # reverse the second half of the second half of linked list
         prev = None
@@ -28,7 +27,6 @@ class Solution:
         ans = 0
         dummy = head
         while i < n:
-            print(dummy.val, prev.val)
             twin_sum = dummy.val + prev.val
             ans = max(ans, twin_sum)
             dummy = dummy.next
