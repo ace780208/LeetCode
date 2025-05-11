@@ -8,7 +8,7 @@ class Solution:
             cost += right_diff
             while(cost > maxCost):
                 left_diff = abs(ord(s[left]) - ord(t[left]))
-                cost -= left
+                cost -= left_diff
                 left += 1
             ans = max(ans, right - left + 1)
         return ans
