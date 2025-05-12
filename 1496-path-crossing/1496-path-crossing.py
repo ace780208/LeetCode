@@ -13,7 +13,7 @@ class Solution:
                 x += 1
             else:
                 x -= 1
-            print((coords))
+
             if (x, y) in coords:
                 return True
             else:
