@@ -11,7 +11,7 @@ class Solution:
                 output.append(ch)
         
         for ch in order:
-            output = output + [ch] * counts.get(ch, 0)
+            output = output + [ch * counts.get(ch, 0)]
         
         return ''.join(output)
             
