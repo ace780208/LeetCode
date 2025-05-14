@@ -3,9 +3,8 @@ class NumArray:
     def __init__(self, nums: List[int]):
         # create initialization nums, size, and calculate the prefix sum
         self.nums = nums
-        self.size = len(self.nums)
         self.prefix = [0]
-        for i in range(self.size):
+        for i in range(len(self.size)):
             self.prefix.append(self.prefix[-1] + self.nums[i])
 
     def sumRange(self, left: int, right: int) -> int:
