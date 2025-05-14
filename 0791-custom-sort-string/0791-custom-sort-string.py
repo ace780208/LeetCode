@@ -10,6 +10,7 @@ class Solution:
             else:
                 output.append(ch)
         
+        # attach the letter * frequency at the end of output
         for ch in order:
             output = output + [ch * counts.get(ch, 0)]
         
