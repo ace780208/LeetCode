@@ -4,7 +4,7 @@ class NumArray:
         # create initialization nums, size, and calculate the prefix sum
         self.nums = nums
         self.prefix = [0]
-        for i in range(len(self.size)):
+        for i in range(len(self.nums)):
             self.prefix.append(self.prefix[-1] + self.nums[i])
 
     def sumRange(self, left: int, right: int) -> int:
