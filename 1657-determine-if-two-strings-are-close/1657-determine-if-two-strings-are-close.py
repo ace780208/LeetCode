@@ -1,5 +1,7 @@
 class Solution:
     def closeStrings(self, word1: str, word2: str) -> bool:
+        if len(word1) != len(word2):
+            return False
         # build hashmaps to store the frequency of each letter in word1 and 2
         counts1 = dict()
         counts2 = dict()
