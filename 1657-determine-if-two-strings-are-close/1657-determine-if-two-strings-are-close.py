@@ -10,14 +10,10 @@ class Solution:
         for s in word2:
             counts2[s] = counts2.get(s, 0) + 1
         
-        s1_key = sorted(counts1.keys())
-        s2_key = sorted(counts2.keys())
-
-        if len(s1_key) != len(s2_key):
+        s1_key = counts1.keys()
+        s2_key = counts2.keys()
+        if s1_key != s2_key:
             return False
-        for index in range(len(s1_key)):
-            if s1_key[index] != s2_key[index]:
-                return False
         
         s1_freq = sorted(counts1.values())
         s2_freq = sorted(counts2.values())
