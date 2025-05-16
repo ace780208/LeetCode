@@ -13,6 +13,7 @@ class Solution:
         s1_key = counts1.keys()
         s2_key = counts2.keys()
         if s1_key != s2_key:
+            print("key fail")
             return False
         
         s1_freq = sorted(counts1.values())
@@ -23,5 +24,5 @@ class Solution:
         for index in range(len(s1_freq)):
             if s1_freq[index] != s2_freq[index]:
                 return False
-        
+
         return True
