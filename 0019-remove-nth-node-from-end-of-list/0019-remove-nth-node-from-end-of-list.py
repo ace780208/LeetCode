@@ -10,7 +10,7 @@ class Solution:
         while dummy:
             total += 1
             dummy = dummy.next
-        print(total)
+
         removed_nth = total - n + 1
         dummy = head
         order = 1
