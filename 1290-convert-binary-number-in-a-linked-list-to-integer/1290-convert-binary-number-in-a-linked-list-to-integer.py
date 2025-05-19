@@ -6,8 +6,8 @@
 class Solution:
     def getDecimalValue(self, head: Optional[ListNode]) -> int:
         dummy = head
-        ans = []
+        ans = 0 
         while dummy:
-            ans.append(str(dummy.val))
+            ans = (ans << 1) + dummy.val
             dummy = dummy.next
-        return int(''.join(ans), 2)
+        return ans
