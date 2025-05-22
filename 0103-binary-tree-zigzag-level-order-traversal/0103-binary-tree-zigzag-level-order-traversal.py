@@ -12,7 +12,7 @@ class Solution:
         
         queue = deque([root])
         left2right = True
-        output = deque()
+        output = []
         while queue:
             node_count = len(queue)
             level_vals = deque()
@@ -31,4 +31,4 @@ class Solution:
             output.append(list(level_vals))
             left2right = not left2right
         
-        return list(output)
+        return output
