@@ -6,12 +6,10 @@ class Solution:
 
     
         for left in range(len(s2)):
-            if s2[left] not in s1_counts:
-                continue
-            s2_counts = Counter(s2[left: left+len(s1)])
-
-            if s1_counts == s2_counts:
-                return True
+            if s2[left] in s1_counts:
+                s2_counts = Counter(s2[left: left+len(s1)])
+                if s1_counts == s2_counts:
+                    return True
         
         return False
 
