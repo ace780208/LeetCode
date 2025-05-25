@@ -14,7 +14,6 @@ class Solution:
             for right in range(len(s1)):
                 s2_counts[s2[left+right]] = s2_counts.get(s2[left+right], 0) + 1
 
-            print(s2[left], s2_counts)
             if s1_counts == s2_counts:
                 return True
         
