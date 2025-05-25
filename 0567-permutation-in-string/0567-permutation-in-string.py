@@ -5,7 +5,7 @@ class Solution:
         s1_counts = Counter(s1)
 
     
-        for left in range(len(s2) - len(s1) + 1):
+        for left in range(len(s2)):
             if s2[left] not in s1_counts:
                 continue
             s2_counts = Counter(s2[left: left+len(s1)])
