@@ -10,13 +10,17 @@ class Solution:
             graph[y].append(x)
             
         def dfs(node):
-            if node not in seen:
+            seen.add(node)
+            if node == destination: 
                 seen.add(node)
+                return True
             for neighbor in graph[node]:
                 if neighbor not in seen:
+                    print(neighbor)
                     seen.add(neighbor)
-                    dfs(neighbor)
+                    if dfs(neighbor):
+                        return True
+            
+            return False
         
-        dfs(source)
-        
-        return destination in seen
+        return dfs(source)
