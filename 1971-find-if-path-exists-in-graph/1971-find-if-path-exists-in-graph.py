@@ -16,7 +16,7 @@ class Solution:
                 return True
             for neighbor in graph[node]:
                 if neighbor not in seen:
-                    print(neighbor)
+                    #print(neighbor)
                     seen.add(neighbor)
                     if dfs(neighbor):
                         return True
