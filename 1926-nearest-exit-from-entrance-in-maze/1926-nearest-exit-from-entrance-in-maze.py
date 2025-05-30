@@ -2,7 +2,8 @@ from collections import deque
 class Solution:
     def nearestExit(self, maze: List[List[str]], entrance: List[int]) -> int:
         queue = deque([(entrance[0], entrance[1])])
-        seen = set((entrance[0], entrance[1]))
+        seen = set()
+        seen.add((entrance[0], entrance[1]))
         m = len(maze)
         n = len(maze[0])
         directions = [(1, 0), (0, 1), (-1, 0), (0, -1)]
@@ -24,7 +25,6 @@ class Solution:
                     move_y = cell_y + dy
                     if valid(move_x, move_y) and (move_x, move_y) not in seen:
                         if is_exit(move_x, move_y):
-                            print(move_x, move_y)
                             return steps
                         else:
                             queue.append((move_x, move_y))
