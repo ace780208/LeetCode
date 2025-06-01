@@ -3,14 +3,19 @@ class Solution:
         """
         Do not return anything, modify nums in-place instead.
         """
-        left = 0
+        if len(nums) == 1:
+            return nums
 
-        for right in range(len(nums)):
-            if nums[right] != 0:
-                nums[right], nums[left] = nums[left], nums[right]
-                left += 1
-        
-        return nums
-
+        for left in range(len(nums)):
+            right = left
+            while right < len(nums):
+                if nums[right] != 0:
+                    break
+                else:
+                    right += 1
             
-        
+            if right < len(nums) and nums[right] != 0 :
+                nums[left], nums[right] = nums[right], nums[left]
+            
+        return nums
+            
