@@ -26,7 +26,6 @@ class Solution:
 
         # get to the prev and node to move
         curr = head
-        #print(k)
         if k > 0:
             while k > 0:
                 curr = curr.next
