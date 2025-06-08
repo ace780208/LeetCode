@@ -27,13 +27,14 @@ class Solution:
         queue = deque([(None, 1)])
         seen = set()
         seen.add((None, 1))
+        '''
         row, col = decode(1)
         if board[row][col] != -1:
             prev_start, prev_end = queue.popleft()
             curr_end = board[row][col]
             queue.append((prev_end, curr_end))
             seen.add((prev_end, curr_end))
-            
+        '''    
         roll = 0
         
         ladder = False
