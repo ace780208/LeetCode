@@ -28,10 +28,8 @@ class Solution:
         seen = set()
         seen.add((None, 1))
         row, col = decode(1)
-        #print(row, col)
         if board[row][col] != -1:
             prev_start, prev_end = queue.popleft()
-            #print(prev_start, prev_end)
             curr_end = board[row][col]
             queue.append((prev_end, curr_end))
             seen.add((prev_end, curr_end))
@@ -44,16 +42,13 @@ class Solution:
             roll += 1
             for sq in range(square_cnt):
                 prev_start, prev_end = queue.popleft()
-                #print(prev_start, prev_end)
                 for dice_roll in range(1, 7):
                     curr_end = prev_end + dice_roll
                     if curr_end > end:
                         break
                     row, col = decode(curr_end)
-                    #print(curr_end, row, col)
                     if board[row][col] != -1:
                         curr_end = board[row][col]
-                    #print(prev_end, dice_roll)
                     if curr_end == end:
                         return roll
                         
