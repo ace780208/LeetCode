@@ -3,7 +3,7 @@ class Solution:
     def snakesAndLadders(self, board: List[List[int]]) -> int:
         n = len(board)
         end = n**2
-        odd = n%2 == 1
+        #odd = n%2 == 1
         
         def decode(i: int):
 
