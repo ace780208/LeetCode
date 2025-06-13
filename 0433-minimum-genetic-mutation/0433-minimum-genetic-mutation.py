@@ -26,7 +26,6 @@ class Solution:
                 return step
             
             for mut in mutation(node):
-                print(mut)
                 if mut not in seen:
                     seen.add(mut)
                     queue.append((mut, step + 1))
