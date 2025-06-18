@@ -20,10 +20,11 @@ class Solution:
             if jump(beginWord, wordList[i]):
                 no_jump = False
                 graph[beginWord].append(wordList[i])
-        if no_jump:
+        if no_jump or endWord not in set(wordList):
             return 0
         
         listlen = len(wordList)
+        #print(listlen)
         for i in range(listlen):
             if wordList[i] not in graph:
                 graph[wordList[i]] = []
