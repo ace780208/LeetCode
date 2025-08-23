@@ -1,5 +1,6 @@
 class Solution:
     def searchInsert(self, nums: List[int], target: int) -> int:
+        # binary search implement to find the index of target or the insertion point
         left = 0
         right = len(nums) - 1
         while left <= right:
