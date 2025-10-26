@@ -8,4 +8,4 @@ class Solution:
         for idx in range(2, cost_len+1):
             dp[idx] = min(dp[idx-1]+cost[idx-1], dp[idx-2]+cost[idx-2])
         
-        return dp[len(cost)]
+        return dp[cost_len]
